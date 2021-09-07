@@ -1,0 +1,9 @@
+pt-BR:
+  admin:
+    actions:
+      dashboard:
+        breadcrumb: 'Navegacao'
+        title: 'Painel'
+        menu: 'Menu'
+    misc:
+      navigation: 'Modelos'
