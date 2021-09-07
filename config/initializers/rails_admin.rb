@@ -3,6 +3,10 @@ require 'i18n'
 RailsAdmin.config do |config|
   config.main_app_name = %w[Money]
 
+  # Model configurations
+  config.label_methods << :description
+  config.included_models = %w[FinancialControl User]
+
   ### Popular gems integration
 
   ## == Devise ==
