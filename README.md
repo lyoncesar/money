@@ -1,11 +1,16 @@
-# README
+# Money
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Application to admin personal financial control.
 
-Things you may want to cover:
+To do:
 
-* Ruby version
+## Container
+### Run
+- `docker-compose up -d`
+
+### Debug
+- Run `docker ps` to know the container id
+- With the container id run `docker attach {container_id}`
 
 * System dependencies
 
@@ -20,5 +25,3 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
-* ...
