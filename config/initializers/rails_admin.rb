@@ -1,6 +1,9 @@
+require 'i18n'
+
 RailsAdmin.config do |config|
   config.main_app_name = %w[Money]
 
+  I18n.default_locale = 'pt-BR'
   ### Popular gems integration
 
   ## == Devise ==
