@@ -4,11 +4,24 @@ pt-BR:
       financial_control:
         one: Controle financiro
         other: Controles financeiros
+      expense:
+        one: Despesa
+        other: Despesas
     attributes:
       financial_control:
         id: 'Id'
         title: 'Título'
         description: 'Descrição'
+        created_at: 'Criação'
+        updated_at: 'Atualização'
+      expense:
+        id: 'Id'
+        title: 'Título'
+        description: 'Descrição'
+        date: 'Data'
+        amount: 'Valor'
+        expense_type: 'Tipo de custo'
+        financial_control_id: 'Controle financeiro'
         created_at: 'Criação'
         updated_at: 'Atualização'
     errors:
@@ -156,6 +169,7 @@ pt-BR:
       required: 'Campo obrigatório'
     flash:
       error: 'Encontramos alguns problemas que impediram a conclusão desta operação:'
+      successful: 'Operação concluída'
     misc:
       filter: 'Digite'
       navigation: 'Modelos'

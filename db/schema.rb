@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_07_192708) do
+ActiveRecord::Schema.define(version: 2021_09_08_020907) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "expenses", force: :cascade do |t|
+    t.string "title", default: ""
+    t.string "description", default: ""
+    t.date "date"
+    t.float "amount", default: 0.0
+    t.integer "expense_type", default: 0
+    t.string "duration", default: ""
+    t.bigint "financial_control_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["financial_control_id"], name: "index_expenses_on_financial_control_id"
+  end
 
   create_table "financial_controls", force: :cascade do |t|
     t.string "title"
@@ -36,5 +49,6 @@ ActiveRecord::Schema.define(version: 2021_09_07_192708) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "expenses", "financial_controls"
   add_foreign_key "financial_controls", "users"
 end
