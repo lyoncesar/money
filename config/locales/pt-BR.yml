@@ -1,17 +1,43 @@
 pt-BR:
   activerecord:
     models:
+      user:
+        one: Usuário
+        other: Usuários
       financial_control:
         one: Controle financiro
         other: Controles financeiros
       expense:
         one: Despesa
         other: Despesas
+      revenue:
+        one: Receita
+        other: Receitas
     attributes:
+      user:
+        id: 'Id'
+        email: 'Email'
+        reset_password_sent_at: 'Envio da troca de senha'
+        remember_created_at: 'Envio de lembrete'
+        financial_controls: 'Controles financeiros'
+        created_at: 'Criação'
+        updated_at: 'Atualização'
       financial_control:
         id: 'Id'
         title: 'Título'
         description: 'Descrição'
+        created_at: 'Criação'
+        updated_at: 'Atualização'
+        expenses: 'Despesas'
+        revenues: 'Receitas'
+      revenue:
+        id: 'Id'
+        title: 'Título'
+        description: 'Descrição'
+        date: 'Data'
+        amount: 'Valor'
+        revenue_type: 'Tipo de receita'
+        financial_control_id: 'Controle financeiro'
         created_at: 'Criação'
         updated_at: 'Atualização'
       expense:
@@ -171,7 +197,7 @@ pt-BR:
       error: 'Encontramos alguns problemas que impediram a conclusão desta operação:'
       successful: 'Operação concluída'
     misc:
-      filter: 'Digite'
+      filter: 'Filtrar'
       navigation: 'Modelos'
       search: 'Selecione'
   helpers:

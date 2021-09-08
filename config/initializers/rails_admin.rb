@@ -8,6 +8,7 @@ RailsAdmin.config do |config|
   config.included_models = %w[
     User
     FinancialControl
+    Revenue
     Expense
   ]
 
