@@ -197,6 +197,7 @@ pt-BR:
       error: 'Encontramos alguns problemas que impediram a conclusão desta operação:'
       successful: 'Operação concluída'
     misc:
+      ago: 'atrás'
       filter: 'Filtrar'
       navigation: 'Modelos'
       search: 'Selecione'
