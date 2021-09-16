@@ -4,4 +4,6 @@ class FinancialControl < ApplicationRecord
   has_many :expenses, dependent: :destroy
 
   include FinancialControlAdmin
+
+  validates :title, presence: true, length: { in: 3..255 }
 end

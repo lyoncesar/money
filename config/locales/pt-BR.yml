@@ -56,6 +56,9 @@ pt-BR:
           attributes:
             user:
               required: 'O controle financeiro precisa de um usuário'
+            title:
+              blank: 'O título não pode ficar vazio'
+              too_short: 'O título está curto, mínimo 3 caracteres'
   date:
     abbr_day_names:
     - dom
