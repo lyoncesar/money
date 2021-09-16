@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe FinancialControl, type: :model do
   describe '#create' do
-    let(:user) { User.create(email: 'me@me.com', password: '123456', password_confirmation: '123456') }
+    let(:user) { create(:user) }
 
     context 'when the financial control is valid' do
       it 'persist on database' do
@@ -25,6 +25,7 @@ RSpec.describe FinancialControl, type: :model do
         )
 
         financial_control.save
+
         expect(financial_control.errors[:user]).to eq(['O controle financeiro precisa de um usuário'])
       end
 
