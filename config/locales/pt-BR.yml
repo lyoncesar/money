@@ -57,8 +57,28 @@ pt-BR:
             user:
               required: 'O controle financeiro precisa de um usuário'
             title:
-              blank: 'O título não pode ficar vazio'
+              blank: 'O título precisa ser preenchido'
               too_short: 'O título está curto, mínimo 3 caracteres'
+        revenue:
+          attributes:
+            financial_control:
+              required: 'A receita precisa de um controle financeiro'
+            title:
+              blank: 'O título deve ser preenchido'
+            amount:
+              blank: 'O valor deve ser preenchido'
+            revenue_type:
+              blank: 'O tipo de receita deve ser preenchido'
+        expense:
+          attributes:
+            financial_control:
+              required: 'A despesa precisa de um controle financeiro'
+            title:
+              blank: 'O título deve ser preenchido'
+            amount:
+              blank: 'O valor deve ser preenchido'
+            expense_type:
+              blank: 'O tipo de despesa deve ser preenchido'
   date:
     abbr_day_names:
     - dom

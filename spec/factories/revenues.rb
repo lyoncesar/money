@@ -1,9 +1,9 @@
 FactoryBot.define do
-  factory :expense do
-    title { 'Aluguel' }
+  factory :revenue do
+    title { 'Adiantamento de salário' }
     description { Faker::Loren.sentence }
     date { Date.today }
-    amount { Faker::Number.decimal(l_digits: 3, r_digits: 2)}
+    amount { Faker::Number.decimal(l_digits: 4, r_digits: 2)}
     expense_type { 1 }
     duration {}
     financial_control { create(:financial_control) }

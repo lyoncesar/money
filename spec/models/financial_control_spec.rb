@@ -40,7 +40,7 @@ RSpec.describe FinancialControl, type: :model do
 
         expect(financial_control.errors[:title]).to eq(
           [
-            'O título não pode ficar vazio',
+            'O título precisa ser preenchido',
             'O título está curto, mínimo 3 caracteres'
           ]
         )
