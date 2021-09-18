@@ -52,6 +52,16 @@ pt-BR:
         updated_at: 'Atualização'
     errors:
       models:
+        expense:
+          attributes:
+            financial_control:
+              required: 'A despesa precisa de um controle financeiro'
+            title:
+              blank: 'O título deve ser preenchido'
+            amount:
+              blank: 'O valor deve ser preenchido'
+            expense_type:
+              blank: 'O tipo de despesa deve ser preenchido'
         financial_control:
           attributes:
             user:
@@ -69,16 +79,14 @@ pt-BR:
               blank: 'O valor deve ser preenchido'
             revenue_type:
               blank: 'O tipo de receita deve ser preenchido'
-        expense:
+        user:
           attributes:
-            financial_control:
-              required: 'A despesa precisa de um controle financeiro'
-            title:
-              blank: 'O título deve ser preenchido'
-            amount:
-              blank: 'O valor deve ser preenchido'
-            expense_type:
-              blank: 'O tipo de despesa deve ser preenchido'
+            email:
+              blank: 'O email deve ser preenchido'
+            password:
+              blank: 'A senha deve ser preenchida'
+            password_confirmation:
+              confirmation: 'A confirmação de senha deve ser preenchida'
   date:
     abbr_day_names:
     - dom
