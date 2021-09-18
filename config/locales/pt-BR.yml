@@ -30,6 +30,16 @@ pt-BR:
         updated_at: 'Atualização'
         expenses: 'Despesas'
         revenues: 'Receitas'
+      financial_movement:
+        id: 'Id'
+        name: 'Nome'
+        description: 'Descrição'
+        date: 'Data'
+        amount: 'Valor'
+        movement_type: 'Tipo de movimento'
+        financial_control_id: 'Controle financeiro'
+        created_at: 'Criação'
+        updated_at: 'Atualização'
       revenue:
         id: 'Id'
         title: 'Título'
@@ -69,6 +79,16 @@ pt-BR:
             title:
               blank: 'O título precisa ser preenchido'
               too_short: 'O título está curto, mínimo 3 caracteres'
+        financial_movement:
+          attributes:
+            financial_control:
+              required: 'O movimento financeiro precisa de um controle financeiro'
+            name:
+              blank: 'O nome deve ser preenchido'
+            amount:
+              blank: 'O valor deve ser preenchido'
+            movement_type:
+              blank: 'O tipo de movimento deve ser preenchido'
         revenue:
           attributes:
             financial_control:

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_08_033715) do
+ActiveRecord::Schema.define(version: 2021_09_18_070540) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,19 @@ ActiveRecord::Schema.define(version: 2021_09_08_033715) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_financial_controls_on_user_id"
+  end
+
+  create_table "financial_movements", force: :cascade do |t|
+    t.string "name", default: ""
+    t.string "description", default: ""
+    t.float "amount", default: 0.0
+    t.date "date"
+    t.integer "movement_type", null: false
+    t.string "duration", default: "", null: false
+    t.bigint "financial_control_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["financial_control_id"], name: "index_financial_movements_on_financial_control_id"
   end
 
   create_table "revenues", force: :cascade do |t|
@@ -64,5 +77,6 @@ ActiveRecord::Schema.define(version: 2021_09_08_033715) do
 
   add_foreign_key "expenses", "financial_controls"
   add_foreign_key "financial_controls", "users"
+  add_foreign_key "financial_movements", "financial_controls"
   add_foreign_key "revenues", "financial_controls"
 end
