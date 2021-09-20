@@ -4,4 +4,6 @@ class FinancialMovement < ApplicationRecord
 
   validates :name, :amount, :movement_type, presence: true
   enum movement_type: { revenue: 0, expense: 1 }
+
+  include FinancialMovementAdmin
 end

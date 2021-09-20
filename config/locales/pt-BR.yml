@@ -7,12 +7,9 @@ pt-BR:
       financial_control:
         one: Controle financiro
         other: Controles financeiros
-      expense:
-        one: Despesa
-        other: Despesas
-      revenue:
-        one: Receita
-        other: Receitas
+      financial_movement:
+        one: Movimento financiro
+        other: Movimentos financeiros
     attributes:
       user:
         id: 'Id'
@@ -37,41 +34,12 @@ pt-BR:
         date: 'Data'
         amount: 'Valor'
         movement_type: 'Tipo de movimento'
-        financial_control_id: 'Controle financeiro'
-        created_at: 'Criação'
-        updated_at: 'Atualização'
-      revenue:
-        id: 'Id'
-        title: 'Título'
-        description: 'Descrição'
-        date: 'Data'
-        amount: 'Valor'
-        revenue_type: 'Tipo de receita'
-        financial_control_id: 'Controle financeiro'
-        created_at: 'Criação'
-        updated_at: 'Atualização'
-      expense:
-        id: 'Id'
-        title: 'Título'
-        description: 'Descrição'
-        date: 'Data'
-        amount: 'Valor'
-        expense_type: 'Tipo de custo'
-        financial_control_id: 'Controle financeiro'
+        duration: 'Duração'
+        financial_control: 'Controle financeiro'
         created_at: 'Criação'
         updated_at: 'Atualização'
     errors:
       models:
-        expense:
-          attributes:
-            financial_control:
-              required: 'A despesa precisa de um controle financeiro'
-            title:
-              blank: 'O título deve ser preenchido'
-            amount:
-              blank: 'O valor deve ser preenchido'
-            expense_type:
-              blank: 'O tipo de despesa deve ser preenchido'
         financial_control:
           attributes:
             user:
@@ -93,16 +61,6 @@ pt-BR:
           attributes:
             financial_movement:
               required: 'A recorrência de movimento financeiro precisa de um movimento financeiro'
-        revenue:
-          attributes:
-            financial_control:
-              required: 'A receita precisa de um controle financeiro'
-            title:
-              blank: 'O título deve ser preenchido'
-            amount:
-              blank: 'O valor deve ser preenchido'
-            revenue_type:
-              blank: 'O tipo de receita deve ser preenchido'
         user:
           attributes:
             email:
