@@ -89,6 +89,10 @@ pt-BR:
               blank: 'O valor deve ser preenchido'
             movement_type:
               blank: 'O tipo de movimento deve ser preenchido'
+        movement_recurrency:
+          attributes:
+            financial_movement:
+              required: 'A recorrência de movimento financeiro precisa de um movimento financeiro'
         revenue:
           attributes:
             financial_control:
