@@ -1,5 +1,93 @@
 <h1>Relatório Financeiro</h1>
 
-<p>Receita total: <%= @total_revenue %></p>
-<p>Despesa total: <%= @total_expense  %></p>
-<p>Saldo: <%= @balance %></p>
+<hr>
+
+<h2>Receitas</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Descrição</th>
+      <th scope="col">Valor</th>
+      <th scope="col">Data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @revenues.order(:date).each do |revenue| %>
+      <tr>
+        <td><%= revenue.name %></td>
+        <td><%= revenue.description %></td>
+        <td><%= "R$#{revenue.amount}" %></td>
+        <td><%= l(revenue.date) %></td>
+      </tr>
+    <% end %>
+
+    <tr>
+      <td></td>
+      <td></td>
+      <td><b>Total</b></td>
+      <td><b><%= @total_revenue %></b></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h2>Despesas</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Descrição</th>
+      <th>Valor</th>
+      <th>Data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @expenses.order(:date).each do |expense| %>
+      <tr>
+        <td><%= expense.name %></td>
+        <td><%= expense.description %></td>
+        <td><%= "R$#{expense.amount}" %></td>
+        <td><%= l(expense.date) %></td>
+      </tr>
+    <% end %>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><b>Total</b></td>
+      <td><b><%= "R$#{@total_expense}" %></b></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h2>Saldo</h2>
+
+<table class="table">
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><b>Despesa total</b></td>
+      <td><b><%= "R$#{@total_expense}" %></b></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><b>Receita total</b></td>
+      <td><b><%= "R$#{@total_revenue}" %></b></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><b>Total</b></td>
+      <td><b><%= "R$#{@balance}" %></b></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
