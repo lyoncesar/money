@@ -7,7 +7,7 @@ RSpec.describe FinancialControl, type: :model do
     context 'when the financial control is valid' do
       it 'persist on database' do
         financial_control = described_class.new(
-          title: 'Meu controle',
+          name: 'Meu controle',
           description: 'Meu primeiro controle financeiro',
           user_id: user.id
         )
@@ -19,7 +19,7 @@ RSpec.describe FinancialControl, type: :model do
     context 'when the financial control is invalid' do
       it 'return an error message' do
         financial_control = described_class.new(
-          title: 'Meu controle',
+          name: 'Meu controle',
           description: 'Meu primeiro controle financeiro',
           user_id: nil
         )
@@ -29,19 +29,19 @@ RSpec.describe FinancialControl, type: :model do
         expect(financial_control.errors[:user]).to eq(['O controle financeiro precisa de um usuário'])
       end
 
-      it 'return error message unless title' do
+      it 'return error message unless name' do
         financial_control = described_class.new(
-          title: '',
+          name: '',
           description: 'Meu primeiro controle financeiro',
           user_id: user.id
         )
 
         financial_control.save
 
-        expect(financial_control.errors[:title]).to eq(
+        expect(financial_control.errors[:name]).to eq(
           [
-            'O título precisa ser preenchido',
-            'O título está curto, mínimo 3 caracteres'
+            'O nome precisa ser preenchido',
+            'O nome está curto, mínimo 3 caracteres'
           ]
         )
       end

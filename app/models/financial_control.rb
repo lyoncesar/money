@@ -4,5 +4,5 @@ class FinancialControl < ApplicationRecord
 
   include FinancialControlAdmin
 
-  validates :title, presence: true, length: { in: 3..255 }
+  validates :name, presence: true, length: { in: 3..255 }
 end

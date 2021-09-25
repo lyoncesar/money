@@ -21,12 +21,11 @@ pt-BR:
         updated_at: 'Atualização'
       financial_control:
         id: 'Id'
-        title: 'Título'
+        name: 'Nome'
         description: 'Descrição'
         created_at: 'Criação'
         updated_at: 'Atualização'
-        expenses: 'Despesas'
-        revenues: 'Receitas'
+        financial_movements: 'Movimentos financeiros'
       financial_movement:
         id: 'Id'
         name: 'Nome'
@@ -44,9 +43,9 @@ pt-BR:
           attributes:
             user:
               required: 'O controle financeiro precisa de um usuário'
-            title:
-              blank: 'O título precisa ser preenchido'
-              too_short: 'O título está curto, mínimo 3 caracteres'
+            name:
+              blank: 'O nome precisa ser preenchido'
+              too_short: 'O nome está curto, mínimo 3 caracteres'
         financial_movement:
           attributes:
             financial_control:
